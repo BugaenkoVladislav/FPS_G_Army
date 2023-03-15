@@ -5,15 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public Canvas death;
     public Canvas menu;
     public Canvas UI;
-    public Camera camera;
+    public Camera player_camera;
     string sceneName;
     // Start is called before the first frame update
     void Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
         menu.gameObject.SetActive(false);
+        death.gameObject.SetActive(false);  
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class Menu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            camera.gameObject.SetActive(false);
+            player_camera.gameObject.SetActive(false);
             UI.gameObject.SetActive(false);
             menu.gameObject.SetActive(true);
             Time.timeScale = 0;
@@ -33,7 +35,7 @@ public class Menu : MonoBehaviour
     }
     public void Resume()
     {
-        camera.gameObject.SetActive(true);
+        player_camera.gameObject.SetActive(true);
         Time.timeScale = 1;
         UI.gameObject.SetActive(true);
         menu.gameObject.SetActive(false);
@@ -42,6 +44,12 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
         Resume();
+    }
+    public void DeathScreen()
+    {
+        Time.timeScale = 0;
+        player_camera.gameObject.SetActive(false);
+        death.gameObject.SetActive(true);
     }
 
 }

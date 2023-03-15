@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    public Camera player_Cam;
     float health = 0;
     float maxHealth = 100;
     public Text health_text;
@@ -23,6 +24,14 @@ public class Health : MonoBehaviour
      public void UI(float deltahealth)
     {
         health += deltahealth;
-        
+        if (health <= 0)
+        {
+            //play death
+            playerDeath();
+        }        
+    }
+    void playerDeath()
+    {
+        player_Cam.GetComponent<Menu>().DeathScreen();
     }
 }

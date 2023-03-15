@@ -29,4 +29,18 @@ public class Enemy : MonoBehaviour
         }
 
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Player")
+        {
+            collision.gameObject.GetComponent<Health>().UI(-1);
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            collision.gameObject.GetComponent<Health>().UI(-1);
+        }
+    }
 }
