@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
+    public GameObject prefabBullet;
+    GameObject thisBullet;
     Ray ray = new Ray();
     public bool isShooting = false;
     public bool isReloading = false;
@@ -12,7 +15,7 @@ public class Shooting : MonoBehaviour
     public GameObject enemy;
     public float damage = -10;
     public Canvas slowmo;
-
+    List<GameObject> pool = new List<GameObject>();
     float bulletThis = 60;
     float bulletAll = 240;
 
@@ -30,8 +33,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-
+        Cleaner();
     }
     void Slowmotion()
     {
@@ -61,6 +63,15 @@ public class Shooting : MonoBehaviour
             isReloading = false;
         }
     }
+    void Cleaner()
+    {
+        if (pool.Count > 50)
+        {
+            Destroy(pool[0]);
+            pool.RemoveAt(0);
+        }
+        
+    }
     private void FixedUpdate()
     {
         ray.direction = transform.forward;
@@ -69,13 +80,15 @@ public class Shooting : MonoBehaviour
         {
             CountBullet();
             isShooting = true;
-
             if (Physics.Raycast(ray, out hit))
-            {
+            {               
+                thisBullet = Instantiate(prefabBullet,hit.point, transform.rotation,hit.transform);//следы от пуль
+                pool.Add(thisBullet);
                 if (hit.transform.name == "Enemy" && !hit.collider.isTrigger)
-                {
+                {                    
                     enemy.GetComponent<Enemy>().RecountHP(damage);
                 }
+                
             }
         }
         else
@@ -92,5 +105,6 @@ public class Shooting : MonoBehaviour
             isReloading = false;
         }
         Slowmotion();
+        
     }
 }
