@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player_camera.GetComponent<Shooting>().isShooting == true)
+        if (player_camera.GetComponent<Shooting>().IsShooting == true)
         {
             animator.SetBool("Shot", true);
         }
@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("Shot", false);
         }
-        if (player_camera.GetComponent<Shooting>().isReloading == true)
+        if (player_camera.GetComponent<Shooting>().IsReloading == true)
         {
             animator.SetBool("Reload", true);
         }

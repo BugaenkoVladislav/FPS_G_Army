@@ -7,26 +7,39 @@ using UnityEngine.UI;
 public class Shooting : MonoBehaviour
 {
     public GameObject prefabBullet;
+    public GameObject enemy;
+    public Canvas slowmo;
+    public Text bullets;
     GameObject thisBullet;
     Ray ray = new Ray();
-    public bool isShooting = false;
-    public bool isReloading = false;
-    RaycastHit hit;
-    public GameObject enemy;
-    public float damage = -10;
-    public Canvas slowmo;
     List<GameObject> pool = new List<GameObject>();
-    float bulletThis = 60;
-    float bulletAll = 240;
+    bool isShooting = false;
+    bool isReloading = false;
+    public bool IsReloading
+    {
+        get 
+        { 
+            return isReloading; 
+        }
 
-    public Text bullets;
-    public Text allBullets;
+    }
+    public bool IsShooting
+    {
+        get
+        {
+            return isShooting;
+        }
+        
+    }
+    RaycastHit hit;    
+    float damage = -10;      
+    float bulletThis = 60;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         slowmo.gameObject.SetActive(false);
-        allBullets.text = bulletAll.ToString();
         bullets.text = bulletThis.ToString();
     }
 
@@ -51,19 +64,18 @@ public class Shooting : MonoBehaviour
     void CountBullet()
     {
         bulletThis--;
+        isShooting = true;
         bullets.text = bulletThis.ToString();
         if (bulletThis <= 0)
         {
-            bulletThis = 30;           
-            bulletAll -= bulletThis;
-            allBullets.text = bulletAll.ToString();
+            bulletThis = 60;           
         }
         else
         {
             isReloading = false;
         }
     }
-    void Cleaner()
+    void Cleaner()//чистит наш пул
     {
         if (pool.Count > 50)
         {
@@ -76,10 +88,9 @@ public class Shooting : MonoBehaviour
     {
         ray.direction = transform.forward;
         ray.origin = transform.position;
-        if (Input.GetMouseButton(0)&& bulletAll>0)
+        if (Input.GetMouseButton(0))
         {
-            CountBullet();
-            isShooting = true;
+            CountBullet();            
             if (Physics.Raycast(ray, out hit))
             {               
                 thisBullet = Instantiate(prefabBullet,hit.point, transform.rotation,hit.transform);//следы от пуль

@@ -1,7 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Detect
     - Enemy
     - Health
     - Menu
@@ -80,6 +79,9 @@ ScriptsOnlyBuild:
     methodName: Resume
   - assembly: Assembly-CSharp
     fullTypeName: Menu
+    methodName: Res
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
     methodName: ExitGame
   sceneClasses:
     Assets/Scenes/FirstScene.unity:
@@ -136,35 +138,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3744}
     - Class: 114
-      Script: {instanceID: 3870}
+      Script: {instanceID: 3928}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 4034}
     - Class: 114
-      Script: {instanceID: 4036}
+      Script: {instanceID: 4282}
     - Class: 114
-      Script: {instanceID: 4284}
+      Script: {instanceID: 4712}
     - Class: 114
-      Script: {instanceID: 4714}
+      Script: {instanceID: 4974}
     - Class: 114
-      Script: {instanceID: 4976}
+      Script: {instanceID: 5218}
     - Class: 114
-      Script: {instanceID: 5220}
+      Script: {instanceID: 5512}
     - Class: 114
-      Script: {instanceID: 5514}
+      Script: {instanceID: 5658}
     - Class: 114
-      Script: {instanceID: 5660}
+      Script: {instanceID: 5698}
     - Class: 114
-      Script: {instanceID: 5700}
+      Script: {instanceID: 5970}
     - Class: 114
-      Script: {instanceID: 5972}
+      Script: {instanceID: 6322}
     - Class: 114
-      Script: {instanceID: 6324}
+      Script: {instanceID: 6586}
     - Class: 114
-      Script: {instanceID: 6588}
+      Script: {instanceID: 6884}
     - Class: 114
-      Script: {instanceID: 6886}
-    - Class: 114
-      Script: {instanceID: 7126}
+      Script: {instanceID: 7124}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -176,6 +176,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -554,7 +556,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 471c0990a824198f756853fe94310cbb
+      Hash: 77661fadb316253bb2dbd11611772b78
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Patrol
@@ -576,12 +578,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
-  - hash:
-      serializedVersion: 2
-      Hash: f71f2fb18033bbbb9451b1167f9347ec
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Detect
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -962,7 +958,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 02e65c8c1687f6ed3038415a4b90563a
+      Hash: 1b878c4ba7cac7d46e04d4d289e214dd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Health
@@ -1022,7 +1018,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: e187819e1e950196018a448ae6c1bcc3
+      Hash: 95fc016469a56f487495477c725c0926
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
@@ -1082,7 +1078,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 4fee18a31a88d5d0aa57982ddda757ff
+      Hash: 6efe9adf6b77f98586707bf6284ee290
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shooting
@@ -1215,4 +1211,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/FirstScene.unity
-  playerPath: C:/Users/Coffee_Cup/Desktop/Army/CHVK_REDAN.exe
+  playerPath: C:/Users/Coffee_Cup/Desktop/CHVK_REDAN.exe

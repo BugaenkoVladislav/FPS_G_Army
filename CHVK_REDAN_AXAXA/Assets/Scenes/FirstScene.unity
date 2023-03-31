@@ -1914,8 +1914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268df9c7135003e4b997a664b01eac8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10000
-  maxhealth: 10000
+  health: 0
+  maxhealth: 1000
 --- !u!114 &879676734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1928,7 +1928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f17a8a209e98f941bec4b9620e24067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   target: {fileID: 1711903957}
   You: {fileID: 879676732}
 --- !u!114 &986760910
@@ -1965,13 +1965,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabBullet: {fileID: 1170941671431302326, guid: 61c917f31c2dead49a06cb1496d704bc, type: 3}
-  isShooting: 0
-  isReloading: 0
   enemy: {fileID: 879676727}
-  damage: -10
   slowmo: {fileID: 1213125291}
   bullets: {fileID: 166969128}
-  allBullets: {fileID: 1603314038}
 --- !u!114 &986760913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2935,7 +2931,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8a000a2e736978240954c4453db082bd, type: 3}
-    m_FontSize: 100
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2946,7 +2942,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 240
+  m_Text: unlim
 --- !u!222 &1603314039
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2972,7 +2968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 174.60497, y: 40.954987}
+  m_AnchoredPosition: {x: 174.60497, y: 30.3}
   m_SizeDelta: {x: 198.14502, y: 106.64398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1711903953

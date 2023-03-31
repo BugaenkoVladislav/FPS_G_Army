@@ -30,7 +30,6 @@ public class Raise : MonoBehaviour
     {
         ray.direction = transform.forward;
         ray.origin = transform.position;
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.green);
         is_Raising = Input.GetKey(KeyCode.E);
         if (is_Raising == true)
         {

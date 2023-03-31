@@ -8,7 +8,6 @@ public class Patrol : MonoBehaviour
     public float speed = 3f;
     public Transform target;
     public Transform You;
-    Enemy enemy;
     // Start is called before the first frame update
     void Start()
     {

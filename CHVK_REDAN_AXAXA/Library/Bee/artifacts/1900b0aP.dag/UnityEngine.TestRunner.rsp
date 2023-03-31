@@ -105,7 +105,7 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"C:/allwhatcouldbe/gamemesters/CHVK_REDAN_AXAXA/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"C:/allwhatcouldbe/gamemesters/GitHub/FPS_G_Army/CHVK_REDAN_AXAXA/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"C:/Program Files/2021.3.18f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll"
 -r:"C:/Program Files/2021.3.18f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
 -r:"C:/Program Files/2021.3.18f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll"
